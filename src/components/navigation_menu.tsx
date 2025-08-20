@@ -3,7 +3,7 @@ import ScrollLink from "./scroll_link";
 const NavigationMenu = () => {
     return (
         <>
-            <nav className="p-4 flex items-center justify-between min-h-18">
+            <nav className="p-4 flex items-center justify-between min-h-18" id="home">
                 <div className="ml-100 block">
                     <ScrollLink to="/" targetId="home">
                         <h1 className="text-white text-2xl font-bold font-mono">
