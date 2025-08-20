@@ -1,40 +1,77 @@
+import { useState } from "react";
 import ScrollLink from "./scroll_link";
 
 const NavigationMenu = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <>
-            <nav className="p-4 flex items-center justify-between min-h-18" id="home">
-                <div className="ml-100 block">
+            <nav className="w-full sticky top-0 z-50 bg-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/60 border-b border-white/10 shadow-sm" id="home">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-20 py-4 flex items-center justify-between">
                     <ScrollLink to="/" targetId="home">
-                        <h1 className="text-white text-2xl font-bold font-mono">
+                        <h1 className="text-white text-xl sm:text-2xl font-bold font-mono">
                             Kiel Portfolio
                         </h1>
                     </ScrollLink>
-                </div>
-                <div className="mr-110 block">
-                    <ul className="flex items-center gap-4 list-none p-4 justify-center">
-                        <li className="p-2 font-mono" >
-                            <ScrollLink
-                                to="/"
-                                targetId="home"
-                                className="text-white">
+
+                    {/* Mobile toggle */}
+                    <button
+                        className="lg:hidden inline-flex flex-col justify-center items-center gap-1 p-2 rounded-md border border-white/20 text-white hover:bg-white/10 focus:outline-none"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded={open}
+                        onClick={() => setOpen((v) => !v)}
+                    >
+                        <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? "translate-y-1.5 rotate-45" : ""}`}></span>
+                        <span className={`block h-0.5 w-6 bg-white transition-opacity ${open ? "opacity-0" : "opacity-100"}`}></span>
+                        <span className={`block h-0.5 w-6 bg-white transition-transform ${open ? "-translate-y-1.5 -rotate-45" : ""}`}></span>
+                    </button>
+
+                    {/* Desktop menu */}
+                    <ul className="hidden lg:flex items-center gap-6 list-none">
+                        <li className="p-2 font-mono">
+                            <ScrollLink to="/" targetId="home" className="text-white">
                                 Home
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink
-                                to="/"
-                                targetId="about"
-                                className="text-white">
+                            <ScrollLink to="/" targetId="about" className="text-white">
                                 About
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink
-                                to="/"
-                                targetId="projects"
-                                className="text-white">
+                            <ScrollLink to="/" targetId="projects" className="text-white">
                                 Projects
+                            </ScrollLink>
+                        </li>
+                        <li className="p-2 font-mono">
+                            <ScrollLink to="/" targetId="contact" className="text-white">
+                                Contact
+                            </ScrollLink>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Mobile menu panel */}
+                <div className={`lg:hidden transition-[max-height] duration-300 overflow-hidden ${open ? "max-h-64" : "max-h-0"}`}>
+                    <ul className="flex flex-col gap-2 px-4 sm:px-6 lg:px-20 pb-4 list-none">
+                        <li className="p-2 font-mono">
+                            <ScrollLink to="/" targetId="home" className="text-white" onClick={() => setOpen(false)}>
+                                Home
+                            </ScrollLink>
+                        </li>
+                        <li className="p-2 font-mono">
+                            <ScrollLink to="/" targetId="about" className="text-white" onClick={() => setOpen(false)}>
+                                About
+                            </ScrollLink>
+                        </li>
+                        <li className="p-2 font-mono">
+                            <ScrollLink to="/" targetId="projects" className="text-white" onClick={() => setOpen(false)}>
+                                Projects
+                            </ScrollLink>
+                        </li>
+                        <li className="p-2 font-mono">
+                            <ScrollLink to="/" targetId="contact" className="text-white" onClick={() => setOpen(false)}>
+                                Contact
                             </ScrollLink>
                         </li>
                     </ul>

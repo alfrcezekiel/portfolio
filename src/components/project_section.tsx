@@ -15,12 +15,14 @@ const ProjectSection = () => {
                         "React",
                         "Node.js",
                         "Express.js",
+                        "Material UI",
                         "Bun.js",
                         "JavaScript",
                         "MySQL",
                         "Tailwind CSS"
                     ]}
                     liveURL="https://clinicmanagement.com"
+                    gitHubURL="https://github.com/alfrcezekiel/Integrated-Clinic-Management-System"
                 />
                 <ProjectPanel
                     side="right"
@@ -35,6 +37,7 @@ const ProjectSection = () => {
                         "MySQL",
                     ]}
                     liveURL="https://weitessentialstore.com"
+                    gitHubURL="https://github.com/alfrcezekiel/WeIT"
                 />
                 <ProjectPanel
                     side="left"
@@ -45,7 +48,60 @@ const ProjectSection = () => {
                         "MySQL",
                         "Java Swing Toolkit"
                     ]}
-                    liveURL=""
+                    liveURL="https://hotelvacationrentals.com"
+                    gitHubURL="https://github.com/alfrcezekiel/Hotel-and-Vacation-Rentals-System"
+                />
+                <ProjectPanel
+                    side="right"
+                    title="Lingaw Music Fest E-Commerce"
+                    description="Built a web platform for Lingaw Music Fest, enabling event scheduling, ticket purchasing, and seat selection while featuring performances from top Filipino artists."
+                    stack={[
+                        "HTML",
+                        "CSS"
+                    ]}
+                    liveURL="https://lingawmusicfest.com"
+                    gitHubURL="https://github.com/alfrcezekiel/E-Commerce-Events"
+                />
+                <ProjectPanel
+                    side="left"
+                    title="Covid Monitor (GUI)"
+                    description="Developed a Java-based GUI application using the Swing toolkit to manage and monitor patient health data during the COVID-19 pandemic. The system allows healthcare providers to register patients, track and categorize symptoms, and process symptom data to identify the type and severity of illness for efficient monitoring and decision-making."
+                    stack={[
+                        "Java",
+                        "Java Swing Toolkit"
+                    ]}
+                    liveURL="https://covidmonitor.com"
+                    gitHubURL="https://github.com/alfrcezekiel/CovidMonitor"
+                />
+                <ProjectPanel
+                    side="right"
+                    title="Travel Ease Web"
+                    description="TravelEase is a modern e-commerce travel agency platform designed to simplify the booking experience for travelers. The system enables users to seamlessly search, compare, and book hotels and flights according to their preferences, providing a one-stop solution for travel planning."
+                    stack={[
+                        "PHP",
+                        "MySQL",
+                        "JavaScript",
+                        "Bootstrap",
+                        "HTML",
+                        "CSS"
+                    ]}
+                    liveURL="https://travelease.com"
+                    gitHubURL="https://github.com/alfrcezekiel/TravelEaseWeb"
+                />
+                <ProjectPanel
+                    side="left"
+                    title="Hotel Reservation"
+                    description="Hotel Reservation is a full-stack e-commerce application that lets guests compare hotels, check rates, and manage bookings with easy check-in and check-out."
+                    stack={[
+                        "PHP",
+                        "MySQL",
+                        "JavaScript",
+                        "Bootstrap",
+                        "HTML",
+                        "CSS"
+                    ]}
+                    liveURL="https://travelhotelreservation.com"
+                    gitHubURL="https://github.com/alfrcezekiel/Hotel-Reservation"
                 />
             </div>
         </section>

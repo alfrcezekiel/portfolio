@@ -2,6 +2,7 @@ import NavigationMenu from "@/components/navigation_menu";
 import MainHeroSection from "@/components/main_hero_section";
 import { useEffect } from "react"
 import ProjectSection from "@/components/project_section";
+import Footer from "@/components/footer";
 
 const App = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const App = () => {
       <div className=" bg-black min-w-full min-h-dvh">
         <ProjectSection />
       </div>
+      <Footer variant="dark" />
     </>
   )
 }

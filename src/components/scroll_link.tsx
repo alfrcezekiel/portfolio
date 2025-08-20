@@ -6,9 +6,10 @@ interface ScrollLinkProps {
     targetId: string;
     children: React.ReactNode;
     className?: string;
+    onClick?: () => void;
 }
 
-const ScrollLink = ({to, children, targetId, className} : ScrollLinkProps) => {
+const ScrollLink = ({to, children, targetId, className, onClick} : ScrollLinkProps) => {
     const location = useLocation();
 
     useEffect(() => {
@@ -22,7 +23,7 @@ const ScrollLink = ({to, children, targetId, className} : ScrollLinkProps) => {
 
     return (
         <>
-            <Link to={`${to}#${targetId}`} className={className}>
+            <Link to={`${to}#${targetId}`} className={className} onClick={onClick}>
                 {children}
             </Link>
         </>
