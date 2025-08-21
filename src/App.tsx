@@ -3,7 +3,7 @@ import MainHeroSection from "@/components/main_hero_section";
 import { useEffect } from "react"
 import ProjectSection from "@/components/project_section";
 import Footer from "@/components/footer";
-
+import AboutSection from "@/components/about_section";
 const App = () => {
   useEffect(() => {
     document.title = "Kiel Portfolio";
@@ -16,6 +16,7 @@ const App = () => {
         <MainHeroSection />
       </div>
       <div className=" bg-black min-w-full min-h-dvh">
+        <AboutSection variant="dark" />
         <ProjectSection />
       </div>
       <Footer variant="dark" />

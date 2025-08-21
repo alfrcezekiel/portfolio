@@ -2,8 +2,8 @@ import ProjectPanel from "@/components/project_panel";
 
 const ProjectSection = () => {
     return (
-        <section id="projects" className="py-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-white font-mono text-center">
+        <section id="projects" className="py-7 px-4 md:py-10 md:px-20 sm:px-2 sm:py-8 lg:px-4 lg:py-8">
+            <h2 className="text-4xl lg:text-5xl md:text-5xl sm:text-5xl font-bold text-white font-mono text-center md:py-4 md:px-2 sm:px-4 sm:py-2 lg:px-5 lg:py-4 py-2 px-3">
                 Projects
             </h2>
             <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch py-24">

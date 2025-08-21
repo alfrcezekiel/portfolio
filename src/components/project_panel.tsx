@@ -23,12 +23,12 @@ const ProjectPanel = ({ side, title, description, stack, liveURL, gitHubURL }: P
             <p className="text-white/85 leading-relaxed max-w-prose">
                 {description}
             </p>
-            <div className={`flex gap-4 mt-2 flex-wrap ${side === "right" ? "justify-end" : ""}`}>
+            <div className={`flex gap-4 mt-2 flex-wrap items-center ${side === "right" ? "justify-end" : ""}`}>
                 {stack.map((s) => (
                     <TechBadge key={s} label={s} />
                 ))}
             </div>
-            <div className={`flex gap-4 mt-2 ${side === "right" ? "justify-end" : ""}`}>
+            <div className={`flex gap-4 mt-2 flex-wrap lg:flex-nowrap md:flex-wrap items-center justify-center ${side === "right" ? "justify-end" : ""}`}>
                 {liveURL && (
                     <Link
                         to={liveURL}

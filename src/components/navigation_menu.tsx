@@ -1,5 +1,8 @@
 import { useState } from "react";
-import ScrollLink from "./scroll_link";
+import ScrollLink from "@/components/scroll_link";
+import { Link } from "react-router-dom";
+import Resume from "@/assets/Resume (2).pdf"
+import { FileText } from "lucide-react";
 
 const NavigationMenu = () => {
     const [open, setOpen] = useState(false);
@@ -8,7 +11,7 @@ const NavigationMenu = () => {
         <>
             <nav className="w-full sticky top-0 z-50 bg-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/60 border-b border-white/10 shadow-sm" id="home">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-20 py-4 flex items-center justify-between">
-                    <ScrollLink to="/" targetId="home">
+                    <ScrollLink to="/" targetId="home" className="cursor-pointer">
                         <h1 className="text-white text-xl sm:text-2xl font-bold font-mono">
                             Kiel Portfolio
                         </h1>
@@ -16,7 +19,7 @@ const NavigationMenu = () => {
 
                     {/* Mobile toggle */}
                     <button
-                        className="lg:hidden inline-flex flex-col justify-center items-center gap-1 p-2 rounded-md border border-white/20 text-white hover:bg-white/10 focus:outline-none"
+                        className="lg:hidden inline-flex flex-col justify-center items-center gap-1 p-2 rounded-md border border-white/20 text-white hover:bg-white/10 focus:outline-none cursor-pointer"
                         aria-label="Toggle navigation menu"
                         aria-expanded={open}
                         onClick={() => setOpen((v) => !v)}
@@ -29,24 +32,34 @@ const NavigationMenu = () => {
                     {/* Desktop menu */}
                     <ul className="hidden lg:flex items-center gap-6 list-none">
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="home" className="text-white">
+                            <ScrollLink to="/" targetId="home" className="text-white cursor-pointer">
                                 Home
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="about" className="text-white">
+                            <ScrollLink to="/" targetId="about" className="text-white cursor-pointer">
                                 About
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="projects" className="text-white">
+                            <ScrollLink to="/" targetId="projects" className="text-white cursor-pointer">
                                 Projects
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="contact" className="text-white">
+                            <ScrollLink to="/" targetId="contact" className="text-white cursor-pointer">
                                 Contact
                             </ScrollLink>
+                        </li>
+                        <li className="p-2 font-mono">
+                            <Link
+                                to={Resume}
+                                target="_blank"
+                                className="text-white cursor-pointer hover:text-white/80 flex items-center gap-2"
+                                title="View Resume"
+                            >
+                                Resume
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -55,24 +68,35 @@ const NavigationMenu = () => {
                 <div className={`lg:hidden transition-[max-height] duration-300 overflow-hidden ${open ? "max-h-64" : "max-h-0"}`}>
                     <ul className="flex flex-col gap-2 px-4 sm:px-6 lg:px-20 pb-4 list-none">
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="home" className="text-white" onClick={() => setOpen(false)}>
+                            <ScrollLink to="/" targetId="home" className="text-white cursor-pointer" onClick={() => setOpen(false)}>
                                 Home
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="about" className="text-white" onClick={() => setOpen(false)}>
+                            <ScrollLink to="/" targetId="about" className="text-white cursor-pointer" onClick={() => setOpen(false)}>
                                 About
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="projects" className="text-white" onClick={() => setOpen(false)}>
+                            <ScrollLink to="/" targetId="projects" className="text-white cursor-pointer" onClick={() => setOpen(false)}>
                                 Projects
                             </ScrollLink>
                         </li>
                         <li className="p-2 font-mono">
-                            <ScrollLink to="/" targetId="contact" className="text-white" onClick={() => setOpen(false)}>
+                            <ScrollLink to="/" targetId="contact" className="text-white cursor-pointer" onClick={() => setOpen(false)}>
                                 Contact
                             </ScrollLink>
+                        </li>
+                        <li className="p-2 font-mono">
+                            <Link
+                                to={Resume}
+                                target="_blank"
+                                className="text-white cursor-pointer hover:text-white/80 flex items-center gap-2"
+                                title="View Resume"
+                                onClick={() => setOpen(false)}
+                            >
+                                <FileText className="w-5 h-5" aria-hidden="true" />
+                            </Link>
                         </li>
                     </ul>
                 </div>
