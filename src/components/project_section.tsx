@@ -6,7 +6,7 @@ const ProjectSection = () => {
             <h2 className="text-4xl lg:text-5xl md:text-5xl sm:text-5xl font-bold text-white font-mono text-center md:py-4 md:px-2 sm:px-4 sm:py-2 lg:px-5 lg:py-4 py-2 px-3">
                 Projects
             </h2>
-            <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch py-24">
+            <div className="container mx-auto px-6 py-18 lg:px-10 lg:py-18 sm:py-18 xl:py-14 xl:px-1 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
                 <ProjectPanel
                     side="left"
                     title="Clinic Management System"
@@ -25,7 +25,7 @@ const ProjectSection = () => {
                     gitHubURL="https://github.com/alfrcezekiel/Integrated-Clinic-Management-System"
                 />
                 <ProjectPanel
-                    side="right"
+                    side="left"
                     title="WeIT: Online IT Esshential Shop"
                     description="Built a full-stack e-commerce platform focused on computer components and IT essentials, featuring product browsing, shopping cart management, and secure online checkout functionality."
                     stack={[
@@ -52,7 +52,7 @@ const ProjectSection = () => {
                     gitHubURL="https://github.com/alfrcezekiel/Hotel-and-Vacation-Rentals-System"
                 />
                 <ProjectPanel
-                    side="right"
+                    side="left"
                     title="Lingaw Music Fest E-Commerce"
                     description="Built a web platform for Lingaw Music Fest, enabling event scheduling, ticket purchasing, and seat selection while featuring performances from top Filipino artists."
                     stack={[
@@ -74,7 +74,7 @@ const ProjectSection = () => {
                     gitHubURL="https://github.com/alfrcezekiel/CovidMonitor"
                 />
                 <ProjectPanel
-                    side="right"
+                    side="left"
                     title="Travel Ease Web"
                     description="TravelEase is a modern e-commerce travel agency platform designed to simplify the booking experience for travelers. The system enables users to seamlessly search, compare, and book hotels and flights according to their preferences, providing a one-stop solution for travel planning."
                     stack={[

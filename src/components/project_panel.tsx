@@ -2,6 +2,7 @@ import TechBadge from "@/components/tech_badge";
 import ScrollLink from "@/components/scroll_link";
 import { Link } from "react-router-dom"
 import { ExternalLink, FolderGit2, Mail} from "lucide-react"
+
 interface ProjectPanelProps {
     side: "left" | "right";
     title: string;
@@ -14,13 +15,13 @@ interface ProjectPanelProps {
 const ProjectPanel = ({ side, title, description, stack, liveURL, gitHubURL }: ProjectPanelProps) => {
     return (
         <div
-            className={`flex flex-col gap-5 p-8 rounded-2xl backdrop-blur-md border border-white/15 bg-gradient-to-br from-white/10 to-transparent shadow-xl 
+            className={`flex flex-col gap-5 p-8 rounded-2xl backdrop-blur-md border border-white/15 bg-gradient-to-br from-white/10 to-transparent shadow-xl
                 ${side === "left" ? "items-start text-left" : "items-start lg:items-end lg:text-right"}`}
         >
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white font-mono">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-extrabold tracking-tight text-white font-mono text-wrap">
                 {title}
             </h2>
-            <p className="text-white/85 leading-relaxed max-w-prose">
+            <p className="text-sm text-white/85 leading-relaxed max-w-prose italic lg:text-base lg:text-white/85 sm:text-white/85 md:text-white/85 md:text-lg xl:text-lg">
                 {description}
             </p>
             <div className={`flex gap-4 mt-2 flex-wrap items-center ${side === "right" ? "justify-end" : ""}`}>
