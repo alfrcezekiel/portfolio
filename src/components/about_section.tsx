@@ -40,7 +40,7 @@ const AboutSection = ({ variant = "dark", className }: AboutSectionProps) => {
             <section id="about" className={`${bg} ${text} w-full py-16 md:py-24 ${className}`}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div className={`rounded-2xl p-6 sm:p-8 ${panel} shadow-xl`}>
-                        <div className="space-y-4 sm:space-y-6">
+                        <div className="space-y-4 sm:space-y-6 md:space-y-6">
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight font-mono">About Me</h2>
                             <p className={`${subtext} text-sm sm:text-base leading-relaxed max-w-prose`}>
                                 I'm Kiel, a passionate <span className="font-semibold">Full Stack Developer</span> with a strong background in software development and a deep understanding of the latest technologies. With a keen eye for detail and a commitment to delivering high-quality results, I am dedicated to creating innovative and user-friendly solutions that meet the needs of my clients and users.
@@ -63,7 +63,7 @@ const AboutSection = ({ variant = "dark", className }: AboutSectionProps) => {
                             />
                         </div>
                         <div className={`rounded-2xl p-6 sm:p-8 ${panel}`}>
-                            <h3 className="text-xl sm:text-2xl font-semibold font-mono mb-4">Tech Stack</h3>
+                            <h3 className="text-xl sm:text-2xl font-bold font-mono mb-4">Tech Stack</h3>
                             <div className="flex flex-wrap gap-3">
                                 {techStack.map((tech) => (
                                     <TechBadge

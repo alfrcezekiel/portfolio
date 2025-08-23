@@ -9,14 +9,14 @@ interface ScrollLinkProps {
     onClick?: () => void;
 }
 
-const ScrollLink = ({to, children, targetId, className, onClick} : ScrollLinkProps) => {
+const ScrollLink = ({ to, children, targetId, className, onClick }: ScrollLinkProps) => {
     const location = useLocation();
 
     useEffect(() => {
         if (location.hash === `#${targetId}`) {
             const element = document.getElementById(targetId);
             if (element) {
-                element.scrollIntoView({behavior: "smooth"})
+                element.scrollIntoView({ behavior: "smooth" })
             }
         }
     }, [location, targetId])

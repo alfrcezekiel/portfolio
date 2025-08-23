@@ -2,7 +2,6 @@ import { useState } from "react";
 import ScrollLink from "@/components/scroll_link";
 import { Link } from "react-router-dom";
 import Resume from "@/assets/Resume (2).pdf"
-import { FileText } from "lucide-react";
 
 const NavigationMenu = () => {
     const [open, setOpen] = useState(false);
@@ -95,7 +94,7 @@ const NavigationMenu = () => {
                                 title="View Resume"
                                 onClick={() => setOpen(false)}
                             >
-                                <FileText className="w-5 h-5" aria-hidden="true" />
+                                Resume
                             </Link>
                         </li>
                     </ul>

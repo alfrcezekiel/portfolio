@@ -18,30 +18,30 @@ const Footer = ({ variant = "dark" }: FooterProps) => {
             <div className="mx-auto max-w-7xl px-6 py-12">
                 <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="space-y-3">
-                        <h3 className="text-2xl font-bold font-mono">Kiel Portfolio</h3>
-                        <p className={`${subtext} text-sm leading-relaxed`}>
+                        <h3 className="text-2xl font-bold font-mono lg:px-3">Kiel Portfolio</h3>
+                        <p className={`${subtext} text-base leading-relaxed sm:text-sm md:text-sm lg:text-sm lg:px-3 xl:text-sm`}>
                             Building clean, performant web experiences. Explore my work and get in touch.
                         </p>
                     </div>
                     <div>
                         <h4 className={`mb-4 text-sm uppercase tracking-wider ${subtext}`}>Quick Links</h4>
                         <ul className="space-y-2 text-sm">
-                            <li>
+                            <li className="px-2 font-mono">
                                 <ScrollLink to="/" targetId="home" className={`${link} transition-colors`}>
                                     Home
                                 </ScrollLink>
                             </li>
-                            <li>
+                            <li className="px-2 font-mono">
                                 <ScrollLink to="/" targetId="about" className={`${link} transition-colors`}>
                                     About
                                 </ScrollLink>
                             </li>
-                            <li>
+                            <li className="px-2 font-mono">
                                 <ScrollLink to="/" targetId="projects" className={`${link} transition-colors`}>
                                     Projects
                                 </ScrollLink>
                             </li>
-                            <li>
+                            <li className="px-2 font-mono">
                                 <ScrollLink to="/" targetId="contact" className={`${link} transition-colors`}>
                                     Contact
                                 </ScrollLink>
