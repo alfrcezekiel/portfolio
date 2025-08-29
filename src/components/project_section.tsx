@@ -1,4 +1,11 @@
-import ProjectPanel from "@/components/project_panel";
+import ProjectPanel from "@/components/project_panel"
+import clinicManagement from "@/assets/Clinic Management System.png"
+import weit from "@/assets/WeIT.png"
+import lingawMusicFest from "@/assets/Lingaw Music Fest.png"
+import covidMonitor from "@/assets/Covid Monitor.png"
+import hotelReservation from "@/assets/Hotel Reservation.png"
+import travelEase from "@/assets/Travel Ease Web.png"
+import hotelAndVacationRentals from "@/assets/Hotel and Vacation Rentals.png"
 
 const ProjectSection = () => {
     return (
@@ -21,12 +28,14 @@ const ProjectSection = () => {
                         "MySQL",
                         "Tailwind CSS"
                     ]}
+                    img={clinicManagement}
                     liveURL="https://clinicmanagement.com"
                     gitHubURL="https://github.com/alfrcezekiel/Integrated-Clinic-Management-System"
                 />
                 <ProjectPanel
                     side="left"
                     title="WeIT: Online IT Esshential Shop"
+                    img={weit}
                     description="Built a full-stack e-commerce platform focused on computer components and IT essentials, featuring product browsing, shopping cart management, and secure online checkout functionality."
                     stack={[
                         "Node.js",
@@ -48,12 +57,14 @@ const ProjectSection = () => {
                         "MySQL",
                         "Java Swing Toolkit"
                     ]}
+                    img={hotelAndVacationRentals}
                     liveURL="https://hotelvacationrentals.com"
                     gitHubURL="https://github.com/alfrcezekiel/Hotel-and-Vacation-Rentals-System"
                 />
                 <ProjectPanel
                     side="left"
                     title="Lingaw Music Fest E-Commerce"
+                    img={lingawMusicFest}
                     description="Built a web platform for Lingaw Music Fest, enabling event scheduling, ticket purchasing, and seat selection while featuring performances from top Filipino artists."
                     stack={[
                         "HTML",
@@ -70,6 +81,7 @@ const ProjectSection = () => {
                         "Java",
                         "Java Swing Toolkit"
                     ]}
+                    img={covidMonitor}
                     liveURL="https://covidmonitor.com"
                     gitHubURL="https://github.com/alfrcezekiel/CovidMonitor"
                 />
@@ -85,6 +97,7 @@ const ProjectSection = () => {
                         "HTML",
                         "CSS"
                     ]}
+                    img={travelEase}
                     liveURL="https://travelease.com"
                     gitHubURL="https://github.com/alfrcezekiel/TravelEaseWeb"
                 />
@@ -100,6 +113,7 @@ const ProjectSection = () => {
                         "HTML",
                         "CSS"
                     ]}
+                    img={hotelReservation}
                     liveURL="https://travelhotelreservation.com"
                     gitHubURL="https://github.com/alfrcezekiel/Hotel-Reservation"
                 />
