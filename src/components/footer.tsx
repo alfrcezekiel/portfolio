@@ -52,7 +52,7 @@ const Footer = ({ variant = "dark" }: FooterProps) => {
                         <h4 className={`mb-4 text-sm uppercase tracking-wider ${subtext}`}>Contact</h4>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <a href="mailto:amoraelfricezekiel@gmail.com" className={`${link} transition-colors`}>
+                                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=amoraelfricezekiel@gmail.com" target="_blank" className={`${link} transition-colors`}>
                                     amoraelfricezekiel@gmail.com
                                 </a>
                             </li>
