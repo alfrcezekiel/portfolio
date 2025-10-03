@@ -12,9 +12,23 @@ interface ScrollLinkProps {
 const ScrollLink = ({ to, children, targetId, className, onClick }: ScrollLinkProps) => {
     const location = useLocation();
 
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (onClick) {
+            onClick();
+        }
+
+        if (targetId === "home" && (location.pathname === "/" || location.pathname === "")) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+            window.history.pushState(null, "", "/");
+        }
+    }
     useEffect(() => {
-        if (location.hash === `#${targetId}`) {
-            const element = document.getElementById(targetId);
+        if (location.hash === `#${targetId}` || (targetId === "home" && !location.hash)) {
+            const element = targetId === "home" ? document.documentElement : document.getElementById(targetId);
             if (element) {
                 element.scrollIntoView({ behavior: "smooth" })
             }
@@ -23,7 +37,11 @@ const ScrollLink = ({ to, children, targetId, className, onClick }: ScrollLinkPr
 
     return (
         <>
-            <Link to={`${to}#${targetId}`} className={className} onClick={onClick}>
+            <Link
+                to={targetId === "home" && (location.pathname === "/" || location.pathname === "") ? "#" : `${to}#${targetId}`}
+                className={className}
+                onClick={handleClick}
+            >
                 {children}
             </Link>
         </>

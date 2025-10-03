@@ -4,7 +4,7 @@ import AboutMe from "@/assets/image.jpg";
 const MainHeroSection = () => {
     return (
         <>
-            <section className="w-full min-h-[80dvh] flex items-center py-14 md:py-24 sm:py-20 lg:py-32 max-sm:px-4 sm:min-h-[80vh] md:min-h-[80vh]">
+            <section className="w-full min-h-[100dvh] flex items-center py-14 md:py-24 sm:py-20 lg:py-32 max-sm:px-4 sm:min-h-[90vh] md:min-h-[95vh]">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                     <div className="flex flex-col gap-6 p-0 sm:p-3 md:p-4">
                         <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-4 xl:space-y-4 max-md:space-y-2">

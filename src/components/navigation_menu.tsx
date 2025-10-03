@@ -1,20 +1,20 @@
 import { useState } from "react";
 import ScrollLink from "@/components/scroll_link";
 import { Link } from "react-router-dom";
-import Resume from "@/assets/Resume (2).pdf"
+import Resume from "@/assets/Another Resume 2.pdf"
 
 const NavigationMenu = () => {
     const [open, setOpen] = useState(false);
 
     return (
         <>
-            <nav className="w-full sticky top-0 z-50 bg-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/60 border-b border-white/10 shadow-sm" id="home">
+            <nav className="w-full fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/60 border-b border-white/10 shadow-sm" id="home">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-20 py-4 flex items-center justify-between">
-                    <ScrollLink to="/" targetId="home" className="cursor-pointer">
+                    <Link to="/" className="cursor-pointer">
                         <h1 className="text-white text-xl sm:text-2xl font-bold font-mono">
                             Kiel Portfolio
                         </h1>
-                    </ScrollLink>
+                    </Link>
 
                     {/* Mobile toggle */}
                     <button

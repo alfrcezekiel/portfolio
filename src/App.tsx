@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import AboutSection from "@/components/about_section";
 const App = () => {
   useEffect(() => {
-    document.title = "Kiel Portfolio";
+    document.title = "Aelfric Ezekiel Amor";
   }, [])
 
   return (
