@@ -1,13 +1,13 @@
 import TechBadge from "@/components/tech_badge";
 import AboutMe from "@/assets/image.jpg";
+import { useTheme } from "@/context/use-theme";
 
 interface AboutSectionProps {
-    variant?: "dark" | "light";
     className?: string;
 }
 
-const AboutSection = ({ variant = "dark", className }: AboutSectionProps) => {
-    const isDark = variant === "dark";
+const AboutSection = ({className }: AboutSectionProps) => {
+    const { isDark } = useTheme();
     const bg = isDark ? "bg-black" : "bg-white";
     const text = isDark ? "text-white/80" : "text-black";
     const subtext = isDark ? "text-white/80" : "text-neutral-700";

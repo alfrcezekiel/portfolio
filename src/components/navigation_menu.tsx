@@ -2,6 +2,7 @@ import { useState } from "react";
 import ScrollLink from "@/components/scroll_link";
 import { Link } from "react-router-dom";
 import Resume from "@/assets/AelfricEzekielAmor.pdf"
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const NavigationMenu = () => {
     const [open, setOpen] = useState(false);
@@ -60,11 +61,14 @@ const NavigationMenu = () => {
                                 Resume
                             </Link>
                         </li>
+                        <li className="p-2 font-mono cursor-pointer">
+                            <ThemeToggle className="h-9 w-9" />
+                        </li>
                     </ul>
                 </div>
 
                 {/* Mobile menu panel */}
-                <div className={`lg:hidden transition-[max-height] duration-300 overflow-hidden ${open ? "max-h-64" : "max-h-0"}`}>
+                <div className={`lg:hidden transition-[max-height] duration-300 overflow-hidden ${open ? "max-h-78" : "max-h-0"}`}>
                     <ul className="flex flex-col gap-2 px-4 sm:px-6 lg:px-20 pb-4 list-none">
                         <li className="p-2 font-mono">
                             <ScrollLink to="/" targetId="home" className="text-white cursor-pointer" onClick={() => setOpen(false)}>
@@ -96,6 +100,9 @@ const NavigationMenu = () => {
                             >
                                 Resume
                             </Link>
+                        </li>
+                        <li className="p-2 font-mono cursor-pointer">
+                            <ThemeToggle className="h-9 w-9" isMobile={true}/>
                         </li>
                     </ul>
                 </div>

@@ -1,12 +1,9 @@
 import ScrollLink from "@/components/scroll_link";
 import { Link } from "react-router-dom"
+import { useTheme } from '@/context/use-theme';
 
-interface FooterProps {
-    variant?: "dark" | "light";
-}
-
-const Footer = ({ variant = "dark" }: FooterProps) => {
-    const isDark = variant === "dark";
+const Footer = () => {
+    const { isDark } = useTheme();
     const bg = isDark ? "bg-black" : "bg-white";
     const text = isDark ? "text-white" : "text-black";
     const subtext = isDark ? "text-neutral-400" : "text-neutral-600";

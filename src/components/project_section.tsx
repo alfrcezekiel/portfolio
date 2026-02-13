@@ -6,10 +6,14 @@ import covidMonitor from "@/assets/Covid Monitor.png"
 import hotelReservation from "@/assets/Hotel Reservation.png"
 import travelEase from "@/assets/Travel Ease Web.png"
 import hotelAndVacationRentals from "@/assets/Hotel and Vacation Rentals.png"
+import { useTheme } from "@/context/use-theme";
 
 const ProjectSection = () => {
+    const { isDark } = useTheme();
+    const bg = isDark ? 'bg-black' : 'bg-white';
+    
     return (
-        <section id="projects" className="py-7 px-4 md:py-10 md:px-20 sm:px-2 sm:py-8 lg:px-4 lg:py-8">
+        <section id="projects" className={`py-7 px-4 md:py-10 md:px-20 sm:px-2 sm:py-8 lg:px-4 lg:py-8 ${bg}`}>
             <h2 className="text-4xl lg:text-5xl md:text-5xl sm:text-5xl font-bold text-white font-mono text-center md:py-4 md:px-2 sm:px-4 sm:py-2 lg:px-5 lg:py-4 py-2 px-3">
                 Projects
             </h2>
@@ -29,7 +33,7 @@ const ProjectSection = () => {
                         "Tailwind CSS"
                     ]}
                     img={clinicManagement}
-                    liveURL="https://clinicmanagement.com"
+                    liveURL="https://integrated-clinic-management-system.vercel.app/cms"
                     gitHubURL="https://github.com/alfrcezekiel/Integrated-Clinic-Management-System"
                 />
                 <ProjectPanel
@@ -45,7 +49,7 @@ const ProjectSection = () => {
                         "Express.js",
                         "MySQL",
                     ]}
-                    liveURL="https://weitessentialstore.com"
+                    liveURL=""
                     gitHubURL="https://github.com/alfrcezekiel/WeIT"
                 />
                 <ProjectPanel
@@ -58,7 +62,7 @@ const ProjectSection = () => {
                         "Java Swing Toolkit"
                     ]}
                     img={hotelAndVacationRentals}
-                    liveURL="https://hotelvacationrentals.com"
+                    liveURL=""
                     gitHubURL="https://github.com/alfrcezekiel/Hotel-and-Vacation-Rentals-System"
                 />
                 <ProjectPanel
@@ -70,7 +74,7 @@ const ProjectSection = () => {
                         "HTML",
                         "CSS"
                     ]}
-                    liveURL="https://lingawmusicfest.com"
+                    liveURL=""
                     gitHubURL="https://github.com/alfrcezekiel/E-Commerce-Events"
                 />
                 <ProjectPanel
@@ -82,7 +86,7 @@ const ProjectSection = () => {
                         "Java Swing Toolkit"
                     ]}
                     img={covidMonitor}
-                    liveURL="https://covidmonitor.com"
+                    liveURL=""
                     gitHubURL="https://github.com/alfrcezekiel/CovidMonitor"
                 />
                 <ProjectPanel
@@ -98,7 +102,7 @@ const ProjectSection = () => {
                         "CSS"
                     ]}
                     img={travelEase}
-                    liveURL="https://travelease.com"
+                    liveURL=""
                     gitHubURL="https://github.com/alfrcezekiel/TravelEaseWeb"
                 />
                 <ProjectPanel
@@ -114,7 +118,7 @@ const ProjectSection = () => {
                         "CSS"
                     ]}
                     img={hotelReservation}
-                    liveURL="https://travelhotelreservation.com"
+                    liveURL=""
                     gitHubURL="https://github.com/alfrcezekiel/Hotel-Reservation"
                 />
             </div>
