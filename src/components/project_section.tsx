@@ -11,10 +11,11 @@ import { useTheme } from "@/context/use-theme";
 const ProjectSection = () => {
     const { isDark } = useTheme();
     const bg = isDark ? 'bg-black' : 'bg-white';
+    const isText = isDark ? 'text-white' : 'text-gray-900';
     
     return (
         <section id="projects" className={`py-7 px-4 md:py-10 md:px-20 sm:px-2 sm:py-8 lg:px-4 lg:py-8 ${bg}`}>
-            <h2 className="text-4xl lg:text-5xl md:text-5xl sm:text-5xl font-bold text-white font-mono text-center md:py-4 md:px-2 sm:px-4 sm:py-2 lg:px-5 lg:py-4 py-2 px-3">
+            <h2 className={`text-4xl lg:text-5xl md:text-5xl sm:text-5xl font-bold ${isText} font-mono text-center md:py-4 md:px-2 sm:px-4 sm:py-2 lg:px-5 lg:py-4 py-2 px-3`}>
                 Projects
             </h2>
             <div className="container mx-auto px-6 py-18 lg:px-10 lg:py-18 sm:py-18 xl:py-14 xl:px-1 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
