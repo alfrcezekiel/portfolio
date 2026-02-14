@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ScrollLink from "@/components/scroll_link";
 import { Link } from "react-router-dom";
-import Resume from "@/assets/AelfricEzekielAmor.pdf"
+import Resume from "@/assets/Aelfric Ezekiel Amor - Resume -2.pdf"
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const NavigationMenu = () => {
@@ -62,7 +62,7 @@ const NavigationMenu = () => {
                             </Link>
                         </li>
                         <li className="p-2 font-mono cursor-pointer">
-                            <ThemeToggle className="h-9 w-9" />
+                            <ThemeToggle className="h-9 w-9 text-white" />
                         </li>
                     </ul>
                 </div>
